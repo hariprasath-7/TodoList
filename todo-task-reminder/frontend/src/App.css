@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e9f5ec, #d4e8d8);
+  color: #1b2a1e;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: grid;
+  place-items: center;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 36px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(35, 79, 45, 0.15);
+}
+
+.heading h1 {
+  margin: 6px 0;
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+}
+
+.heading p {
+  color: #647067;
+}
+
+.tag {
+  color: #397246 !important;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin: 28px 0 16px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #b9ccb9;
+  border-radius: 10px;
+  outline-color: #397246;
+}
+
+.task-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 18px;
+  background: #397246;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #285832;
+}
+
+.task-summary {
+  display: flex;
+  gap: 12px;
+  color: #5f6d62;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.task-section {
+  margin-top: 28px;
+}
+
+.task-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.task-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e4ece5;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+
+.task input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #397246;
+}
+
+.completed span {
+  color: #738077;
+  text-decoration: line-through;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  color: #397246;
+}
+
+.delete-button {
+  color: #b02c2c;
+}
+
+.empty-message {
+  color: #718076;
+  font-size: 0.95rem;
+}
+
+.error {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #a32323;
+}
+
+@media (max-width: 520px) {
+  .todo-card {
+    padding: 24px 18px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task {
+    align-items: flex-start;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
